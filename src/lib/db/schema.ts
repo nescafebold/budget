@@ -9,6 +9,13 @@ import {
   date,
   pgEnum,
 } from "drizzle-orm/pg-core";
+import { InferSelectModel, InferInsertModel } from "drizzle-orm";
+
+export const providerEnum = pgEnum("provider", [
+  "google",
+  "github",
+  "credentials",
+]);
 
 export const walletTypeEnum = pgEnum("wallet_type", [
   "basic",
@@ -46,6 +53,17 @@ export const users = pgTable("users", {
   currency: varchar("currency", { length: 10 }).default("PHP"),
   createdAt: timestamp("created_at").defaultNow(),
 });
+
+export const refreshTokens = pgTable("refresh_tokens", {
+  id: uuid("id").defaultRandom().primaryKey(),
+  userId: uuid("user_id").notNull().references(() => users.id, {
+    onDelete: "cascade",
+  }),
+  token: varchar("refresh_token").notNull().unique(),
+  expiresAt: timestamp("expires_at").notNull(),
+  isRevoked: boolean("is_revoked").notNull().default(false),
+  createdAt: timestamp("created_at").notNull().defaultNow(),
+})
 
 export const wallets = pgTable("wallets", {
   id: uuid("id").defaultRandom().primaryKey(),
@@ -118,3 +136,8 @@ export const recurringTransactions = pgTable("recurring_transactions", {
   isActive: boolean("is_active").default(true),
   createdAt: timestamp("created_at").defaultNow(),
 });
+
+
+export type User = InferSelectModel<typeof users>;
+export type NewUser = InferInsertModel<typeof users>;
+export type RefreshToken = InferSelectModel<typeof refreshTokens>;
