@@ -4,8 +4,8 @@ import { NextRequest, NextResponse } from "next/server";
 
 // eq is a Drizzle helper that means "equals" in SQL — like WHERE email = '...'
 import { eq } from "drizzle-orm";
-import { db } from "@/db";
-import { users } from "@/db/schema";
+import { db } from "@/lib/db/index";
+import { users } from "@/lib/db/schema";
 import { registerSchema } from "@/lib/validations";
 import { registerRateLimit } from "@/lib/rate-limit";
 import bcrypt from "bcryptjs";
