@@ -2,6 +2,7 @@
 // auth() reads the session from the cookie without any extra API calls.
 import { auth } from "@/lib/auth";
 import { redirect } from "next/navigation";
+import LogoutButton from "@/components/logout-button";
 
 export default async function DashboardPage() {
     // Get the current session
@@ -21,6 +22,7 @@ export default async function DashboardPage() {
                     Logged in as: {session.user.email}
                 </p>
             </div>
+            <LogoutButton />
         </div>
     );
 }

@@ -1,5 +1,9 @@
 "use client";
 
+import Image from 'next/image';
+import GithubIcon from '@/components/icons/googleicon';
+import GoogleIcon from '@/components/icons/googleicon';
+
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -63,7 +67,25 @@ export default function RegisterPage() {
 
     return (
         <div className="min-h-screen flex items-center justify-center bg-background p-4">
-            <Card className="w-full max-w-md">
+            <div className="flex flex-col min-w-sm border my-auto gap-2 px-4">
+                <h1 className="text-center text-lg font-bold">Signup</h1>
+                <Label>Full Name</Label>
+                <Input type="text" />
+                <Label>Email</Label>
+                <Input type="text" />
+                <Label>Password</Label>
+                <Input type="password" />
+
+                <Button className="cursor-pointer"><p>Signup</p></Button>
+                <p>Or Signup using</p>
+                <div className='flex gap-2 relative'>
+                    <GithubIcon />
+                    <GoogleIcon />
+
+                </div>
+
+            </div>
+            {/* <Card className="w-full max-w-md">
                 <CardHeader className="space-y-1">
                     <CardTitle className="text-2xl font-bold">Create an account</CardTitle>
                     <CardDescription>Start tracking your money today</CardDescription>
@@ -129,7 +151,7 @@ export default function RegisterPage() {
                         </Link>
                     </p>
                 </CardFooter>
-            </Card>
+            </Card> */}
         </div>
     );
 }

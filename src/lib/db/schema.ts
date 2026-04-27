@@ -45,14 +45,14 @@ export const currencyEnum = pgEnum("currency", ["PHP", "USD"]);
 export const users = pgTable("users", {
   id: uuid("id").defaultRandom().primaryKey(),
   email: varchar("email", { length: 255 }).notNull().unique(),
-  emailVerified: boolean("email_verified").default(false).notNull(),
+  emailVerified: boolean("email_verified").notNull().default(false),
   name: varchar("name", { length: 255 }).notNull(),
   avatarUrl: varchar("avatar_url", { length: 255 }),
   passwordHash: varchar("password_hash", { length: 255 }),
   currency: varchar("currency", { length: 10 }).default("PHP"),
   provider: providerEnum("provider").notNull().default("credentials"),
   createdAt: timestamp("created_at").defaultNow(),
-  updatedAt: timestamp("updated_at").notNull().defaultNow(),
+  updatedAt: timestamp("updated_at").defaultNow(),
 });
 
 export const refreshTokens = pgTable("refresh_tokens", {
