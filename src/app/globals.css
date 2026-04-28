@@ -49,81 +49,132 @@
 }
 
 :root {
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
-  --destructive: oklch(0.577 0.245 27.325);
+  --card: oklch(99.73% 0.0130 106.79);
+  --card-foreground: oklch(32.57% 0.0596 177.63);
+  --popover: oklch(99.73% 0.0130 106.79);
+  --popover-foreground: oklch(32.57% 0.0596 177.63);
+  --primary: oklch(32.57% 0.0596 177.63);
+  --primary-foreground: oklch(99.73% 0.0130 106.79);
+  --secondary: oklch(99.73% 0.0130 106.79);
+  --secondary-foreground: oklch(32.57% 0.0596 177.63);
+  --muted: oklch(96% 0.01 120);
+  --muted-foreground: oklch(50% 0.02 171);
+  --accent: oklch(93% 0.02 171);
+  --accent-foreground: oklch(24% 0.07 171);
+  --destructive: oklch(49.34% 0.2024 29.23);
   --border: oklch(0.922 0 0);
   --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
-  --chart-1: oklch(0.87 0 0);
-  --chart-2: oklch(0.556 0 0);
-  --chart-3: oklch(0.439 0 0);
-  --chart-4: oklch(0.371 0 0);
-  --chart-5: oklch(0.269 0 0);
+  --ring: oklch(32.57% 0.0596 177.63);
+  --chart-1: oklch(62.00% 0.2116 260.60);
+  /* #307DFE — income blue (brighter for dark bg) */
+  --chart-2: oklch(62.00% 0.2024 29.23);
+  /* #E64334 — expense red (brighter for dark bg) */
+  --chart-3: oklch(65.00% 0.0500 177.63);
+  /* #6E998E — category green 1 */
+  --chart-4: oklch(52.00% 0.0400 177.63);
+  /* #4F7068 — category green 2 */
+  --chart-5: oklch(40.00% 0.0350 177.63);
+  /* #324E47 — category green 3 */
   --radius: 0.625rem;
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar: oklch(99.73% 0.0130 106.79);
+  --sidebar-foreground: oklch(32.57% 0.0596 177.63);
   --sidebar-primary: oklch(0.205 0 0);
   --sidebar-primary-foreground: oklch(0.985 0 0);
   --sidebar-accent: oklch(0.97 0 0);
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
+  --background: oklch(99.84% 0.0078 106.80);
+  --foreground: oklch(32.57% 0.0596 177.63);
 }
 
 .dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.205 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.205 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.922 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.556 0 0);
-  --chart-1: oklch(0.87 0 0);
-  --chart-2: oklch(0.556 0 0);
-  --chart-3: oklch(0.439 0 0);
-  --chart-4: oklch(0.371 0 0);
-  --chart-5: oklch(0.269 0 0);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.556 0 0);
+  --background: oklch(12.00% 0.0350 177.63);
+  /* #000905 — very deep green-black page bg */
+  --foreground: oklch(92.00% 0.0130 106.79);
+  /* #E5E5DB — warm off-white text */
+
+  --card: oklch(18.00% 0.0400 177.63);
+  /* #001711 — dark green card surface */
+  --card-foreground: oklch(92.00% 0.0130 106.79);
+  /* #E5E5DB — text inside cards */
+
+  --popover: oklch(16.00% 0.0400 177.63);
+  /* #00120D — dropdown bg, slightly darker than card */
+  --popover-foreground: oklch(92.00% 0.0130 106.79);
+  /* #E5E5DB — text inside dropdowns */
+
+  --primary: oklch(76.00% 0.0596 177.63);
+  /* #88BDB0 — light mint green (readable on dark bg) */
+  --primary-foreground: oklch(12.00% 0.0400 177.63);
+  /* #000905 — dark text on mint green button */
+
+  --secondary: oklch(22.00% 0.0300 177.63);
+  /* #081F1A — subtle dark surface for secondary buttons */
+  --secondary-foreground: oklch(88.00% 0.0130 106.79);
+  /* #D8D8CE — text on secondary button */
+
+  --muted: oklch(22.00% 0.0200 177.63);
+  /* #101D1A — disabled/skeleton areas */
+  --muted-foreground: oklch(60.00% 0.0200 177.63);
+  /* #74847F — hint text, timestamps, labels */
+
+  --accent: oklch(26.00% 0.0400 177.63);
+  /* #092A23 — hover highlight on list rows/nav items */
+  --accent-foreground: oklch(90.00% 0.0130 106.79);
+  /* #DEDED5 — text on hovered rows */
+
+  --destructive: oklch(58.00% 0.2024 29.23);
+  /* #D83327 — brighter red (legible on dark bg) */
+
+  --border: oklch(28.00% 0.0250 177.63);
+  /* #1B2D28 — card edges, dividers */
+  --input: oklch(24.00% 0.0250 177.63);
+  /* #11231F — input field border */
+  --ring: oklch(76.00% 0.0596 177.63);
+  /* #88BDB0 — focus ring, matches dark primary */
+
+  --chart-1: oklch(62.00% 0.2116 260.60);
+  /* #307DFE — income blue (brighter for dark bg) */
+  --chart-2: oklch(62.00% 0.2024 29.23);
+  /* #E64334 — expense red (brighter for dark bg) */
+  --chart-3: oklch(65.00% 0.0500 177.63);
+  /* #6E998E — category green 1 */
+  --chart-4: oklch(52.00% 0.0400 177.63);
+  /* #4F7068 — category green 2 */
+  --chart-5: oklch(40.00% 0.0350 177.63);
+  /* #324E47 — category green 3 */
+
+  --radius: 0.625rem;
+  /* unchanged */
+
+  --sidebar: oklch(14.00% 0.0450 177.63);
+  /* #000E08 — navbar bg, darkest surface */
+  --sidebar-foreground: oklch(92.00% 0.0130 106.79);
+  /* #E5E5DB — navbar text */
+  --sidebar-primary: oklch(76.00% 0.0596 177.63);
+  /* #88BDB0 — active nav item bg */
+  --sidebar-primary-foreground: oklch(12.00% 0.0400 177.63);
+  /* #000905 — text on active nav item */
+  --sidebar-accent: oklch(24.00% 0.0350 177.63);
+  /* #09241F — hovered nav item */
+  --sidebar-accent-foreground: oklch(88.00% 0.0130 106.79);
+  /* #D8D8CE — text on hovered nav item */
+  --sidebar-border: oklch(26.00% 0.0250 177.63);
+  /* #162823 — line between sidebar and content */
+  --sidebar-ring: oklch(70.00% 0.0500 177.63);
+  /* #7DA99E — focus ring inside sidebar */
 }
 
 @layer base {
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
+
   html {
     @apply font-sans;
   }

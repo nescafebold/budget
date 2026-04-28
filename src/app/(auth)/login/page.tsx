@@ -1,7 +1,7 @@
 // "use client" means this component runs in the browser, not on the server.
 // We need this because we're using form state, onClick handlers, etc.
 "use client";
-
+import Image from "next/image";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -77,12 +77,12 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background p-4">
-      <div className="flex flex-col min-w-sm border my-auto gap-2 px-4">
-        <h1 className="text-center text-lg font-bold">Login</h1>
-        <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
+    <main className="min-h-screen bg-background py-15 ">
+      <div className="flex flex-col w-full max-w-sm border gap-2 p-5 bg-sidebar text-sidebar-foreground rounded-md mx-auto  overflow-hidden">
+        <h1 className="text-center text-2xl font-bold">Login</h1>
+        <form onSubmit={handleSubmit(onSubmit)} className="space-y-4 flex flex-col gap-2 noValidate ">
           <div className="space-y-2">
-            <Label htmlFor="email">Email</Label>
+            <Label htmlFor="email" className="text-md">Email</Label>
             <Input
               id="email"
               type="email"
@@ -95,7 +95,7 @@ export default function LoginPage() {
             )}
           </div>
           <div className="space-y-2">
-            <Label htmlFor="password">Password</Label>
+            <Label htmlFor="password" className="text-md">Password</Label>
             <Input
               id="password"
               type="password"
@@ -112,41 +112,53 @@ export default function LoginPage() {
 
           <Button
             type="submit"
-            className="w-full cursor-pointer"
+            className="w-full cursor-pointer min-h-10 text-lg   "
             disabled={isLoading}
           >
-            {isLoading ? "Logging in..." : "Login"}
+            {isLoading ? "Loggin in..." : "Login"}
           </Button>
         </form>
-        <p className="text-center text-sm">Or Login using</p>
-        <div className="flex gap-2 justify-center">
-          <Button
-            variant="outline"
-            onClick={() => signIn("google", { callbackUrl })}
-            className="h-14 w-14 cursor-pointer p-2 flex items-center justify-center overflow-hidden"
-          >
-            <span className="w-full h-full flex items-center justify-center">
-              <GoogleIcon />
-            </span>
-          </Button>
-          <Button
-            variant="outline"
-            onClick={() => signIn("github", { callbackUrl })}
-            className="h-14 w-14 cursor-pointer p-2 flex items-center justify-center overflow-hidden"
-          >
-            <span className="w-full h-full flex items-center justify-center">
-              <GithubIcon />
-            </span>
-          </Button>
+        <hr className="my-7 mx-10" />
+        <div className="flex flex-col gap-5">
+          <p className="text-center text-md">Or Login using</p>
+          <div className="flex gap-2 justify-center">
+            <Button
+              variant="outline"
+              size="xxl"
+              onClick={() => signIn("google", { callbackUrl: "/dashboard" })}
+              className=" cursor-pointer p-2 flex items-center justify-center overflow-hidden"
+            >
+              <span className="w-full h-full flex items-center justify-center">
+                <Image
+                  className="dark:invert"
+                  src="/settings.svg"
+                  alt="Google Icon"
+                  width={100}
+                  height={24}
+                  priority
+                />
+              </span>
+            </Button>
+            <Button
+              variant="outline"
+              size="xxl"
+              onClick={() => signIn("github", { callbackUrl: "/dashboard" })}
+              className="cursor-pointer p-2 flex items-center justify-center overflow-hidden"
+            >
+              <span className="w-full h-full flex items-center justify-center">
+                <GithubIcon />
+              </span>
+            </Button>
+          </div>
+          <p className="text-center text-md">
+            Don't have an account?{" "}
+            <Link href="/register" className="text-chart-1 hover:underline">
+              Signup
+            </Link>
+          </p>
         </div>
-        <p className="text-center text-sm">
-          Don't have an account?
-          <Link href="/register" className="text-blue-500 hover:underline">
-            Sign up
-          </Link>
-        </p>
       </div>
-    </div>
+    </main>
   );
 }
 
