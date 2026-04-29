@@ -40,9 +40,9 @@ export default function NavLinks() {
             <div className="block md:hidden">
                 <DropdownMenu>
                     <DropdownMenuTrigger asChild>
-                        <Button variant="outline">
-                            <div className="w-10 h-10  relative ">
-                                <MenuSvg />
+                        <Button variant="outline" className="cursor-pointer" size="xl">
+                            <div className="flex justify-center items-center">
+                                <MenuSvg className="size-7" />
                             </div>
                         </Button>
                     </DropdownMenuTrigger>

@@ -1,6 +1,7 @@
 // "use client" means this component runs in the browser, not on the server.
 // We need this because we're using form state, onClick handlers, etc.
 "use client";
+import BudgetSvg from "@/components/icons/budgetsvg";
 import Image from "next/image";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
@@ -22,6 +23,8 @@ import {
 } from "@/components/ui/card";
 import GithubIcon from "@/components/icons/githubicon";
 import GoogleIcon from "@/components/icons/googleicon";
+import DashboardSvg from "@/components/icons/dashboardsvg";
+import TransactionsSvg from "@/components/icons/transactionssvg";
 
 export default function LoginPage() {
   // useRouter lets us navigate programmatically (e.g., after login, go to /dashboard)
@@ -119,44 +122,35 @@ export default function LoginPage() {
           </Button>
         </form>
         <hr className="my-7 mx-10" />
-        <div className="flex flex-col gap-5">
+        <div className="flex flex-col gap-1">
           <p className="text-center text-md">Or Login using</p>
-          <div className="flex gap-2 justify-center">
+          <div className="flex gap-1 justify-center">
             <Button
-              variant="outline"
+              variant="ghost"
               size="xxl"
               onClick={() => signIn("google", { callbackUrl: "/dashboard" })}
-              className=" cursor-pointer p-2 flex items-center justify-center overflow-hidden"
+              className="cursor-pointer px-0 m-0 flex items-center justify-center"
             >
-              <span className="w-full h-full flex items-center justify-center">
-                <Image
-                  className="dark:invert"
-                  src="/settings.svg"
-                  alt="Google Icon"
-                  width={100}
-                  height={24}
-                  priority
-                />
-              </span>
+              <GoogleIcon className="size-12" />
             </Button>
+
             <Button
-              variant="outline"
+              variant="ghost"
               size="xxl"
               onClick={() => signIn("github", { callbackUrl: "/dashboard" })}
               className="cursor-pointer p-2 flex items-center justify-center overflow-hidden"
             >
-              <span className="w-full h-full flex items-center justify-center">
-                <GithubIcon />
-              </span>
+              <GithubIcon className="size-12" />
             </Button>
           </div>
-          <p className="text-center text-md">
-            Don't have an account?{" "}
-            <Link href="/register" className="text-chart-1 hover:underline">
-              Signup
-            </Link>
-          </p>
+          <TransactionsSvg />
         </div>
+        <p className="text-center text-md mt-5">
+          Don't have an account?{" "}
+          <Link href="/register" className="text-chart-1 hover:underline">
+            Signup
+          </Link>
+        </p>
       </div>
     </main>
   );

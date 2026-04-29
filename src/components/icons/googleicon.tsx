@@ -1,9 +1,9 @@
-export default function GoogleIcon() {
+export default function GoogleIcon({ className }: { className?: string }) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 50 50"
-      className="w-full h-full" // fill whatever parent gives us
+      className={className} // fill whatever parent gives us
       aria-hidden="true"
     >
       <path

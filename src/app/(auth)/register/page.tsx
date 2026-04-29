@@ -125,37 +125,38 @@ export default function RegisterPage() {
                     </Button>
                 </form>
                 <hr className="my-7 mx-10" />
-                <div className="flex flex-col gap-5">
+                <div className="flex flex-col gap-1">
                     <p className="text-center text-md">Or Signup using</p>
-                    <div className="flex gap-2 justify-center">
+                    <div className="flex gap-1 justify-center">
                         <Button
-                            variant="outline"
+                            variant="ghost"
                             size="xxl"
                             onClick={() => signIn("google", { callbackUrl: "/dashboard" })}
                             className=" cursor-pointer p-2 flex items-center justify-center overflow-hidden"
                         >
                             <span className="w-full h-full flex items-center justify-center">
-                                <GoogleIcon />
+                                <GoogleIcon className="size-12" />
                             </span>
                         </Button>
                         <Button
-                            variant="outline"
+                            variant="ghost"
                             size="xxl"
                             onClick={() => signIn("github", { callbackUrl: "/dashboard" })}
                             className="cursor-pointer p-2 flex items-center justify-center overflow-hidden"
                         >
                             <span className="w-full h-full flex items-center justify-center">
-                                <GithubIcon />
+                                <GithubIcon className="size-12" />
                             </span>
                         </Button>
                     </div>
-                    <p className="text-center text-md">
-                        Already have an account?{" "}
-                        <Link href="/login" className="text-chart-1 hover:underline">
-                            Login
-                        </Link>
-                    </p>
+
                 </div>
+                <p className="text-center text-md mt-5">
+                    Already have an account?{" "}
+                    <Link href="/login" className="text-chart-1 hover:underline">
+                        Login
+                    </Link>
+                </p>
             </div>
         </main>
     );
