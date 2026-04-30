@@ -25,6 +25,9 @@ import GithubIcon from "@/components/icons/githubicon";
 import GoogleIcon from "@/components/icons/googleicon";
 import DashboardSvg from "@/components/icons/dashboardsvg";
 import TransactionsSvg from "@/components/icons/transactionssvg";
+import ReportsSvg from "@/components/icons/reportssvg";
+import DebtTrackerSvg from "@/components/icons/debt-trackersvg";
+import SettingsSvg from "@/components/icons/settingssvg";
 
 export default function LoginPage() {
   // useRouter lets us navigate programmatically (e.g., after login, go to /dashboard)
@@ -82,7 +85,7 @@ export default function LoginPage() {
   return (
     <main className="min-h-screen bg-background py-15 ">
       <div className="flex flex-col w-full max-w-sm border gap-2 p-5 bg-sidebar text-sidebar-foreground rounded-md mx-auto  overflow-hidden">
-        <h1 className="text-center text-2xl font-bold">Login</h1>
+        <h1 className="text-center text-3xl font-bold">LOGIN</h1>
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-4 flex flex-col gap-2 noValidate ">
           <div className="space-y-2">
             <Label htmlFor="email" className="text-md">Email</Label>
@@ -143,7 +146,6 @@ export default function LoginPage() {
               <GithubIcon className="size-12" />
             </Button>
           </div>
-          <TransactionsSvg />
         </div>
         <p className="text-center text-md mt-5">
           Don't have an account?{" "}
