@@ -13,7 +13,8 @@ export default auth((req) => {
     const isPublicPath =
         pathname.startsWith("/login") ||
         pathname.startsWith("/register") ||
-        pathname.startsWith("/api/auth");
+        pathname.startsWith("/api/auth") ||
+        pathname === "/";
 
     // If they're NOT logged in and trying to access a private page → redirect to login
     if (!isLoggedIn && !isPublicPath) {

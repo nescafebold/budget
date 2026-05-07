@@ -75,7 +75,16 @@ export default function NavLinks() {
                         >  <p > {link.name} </p></Link>
                     )
                 })}
+                <Link href="/register">
+                    <Button
+                        variant="default"
+                        className="cursor-pointer m-0 flex items-center justify-center w-full"
+                    >
+                        Get Started
+                    </Button>
+                </Link>
             </div>
+
         </div >
     )
 }

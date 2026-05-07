@@ -71,7 +71,7 @@ export default function RegisterPage() {
     };
 
     return (
-        <main className="min-h-screen bg-background py-15 ">
+        <main className="max-h-screen bg-card py-15 ">
             <div className="flex flex-col w-full max-w-sm border gap-2 p-5 bg-sidebar text-sidebar-foreground rounded-md mx-auto  overflow-hidden">
                 <h1 className="text-center text-3xl font-bold">SIGNUP</h1>
                 <form onSubmit={handleSubmit(onSubmit)} className="space-y-4 flex flex-col gap-2 noValidate ">

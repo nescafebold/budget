@@ -31,7 +31,7 @@ export const categoryTypeEnum = pgEnum("category_type", [
 export const transactionTypeEnum = pgEnum("transaction_type", [
   "income",
   "expense",
-  "debt/load",
+  "debt/loan",
   "transfer",
 ]);
 export const frequencyEnum = pgEnum("frequency", [
@@ -142,3 +142,4 @@ export const recurringTransactions = pgTable("recurring_transactions", {
 export type User = InferSelectModel<typeof users>;
 export type NewUser = InferInsertModel<typeof users>;
 export type RefreshToken = InferSelectModel<typeof refreshTokens>;
+export type NewRefreshToken = InferInsertModel<typeof refreshTokens>;
