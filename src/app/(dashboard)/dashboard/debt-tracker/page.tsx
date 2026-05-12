@@ -9,6 +9,6 @@ export default async function TransactionPage() {
     if (!session) redirect("/login");
 
     return (
-        <div className="min-h-screen flex items-center justify-center">Hello from transactions</div>
+        <div className="min-h-screen flex items-center justify-center">Hello from debt-tracker</div>
     )
 }
