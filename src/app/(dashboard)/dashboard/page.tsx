@@ -4,6 +4,7 @@ import { auth } from "@/lib/auth";
 import { redirect } from "next/navigation";
 import LogoutButton from "@/components/ui/logout-button";
 import TotalBalance from "@/components/ui/total-balance";
+import DateNavigation from "@/components/ui/date-navigation";
 
 export default async function DashboardPage() {
     // Get the current session
@@ -13,8 +14,9 @@ export default async function DashboardPage() {
     if (!session) redirect("/login");
 
     return (
-        <div className="min-h-screen flex">
+        <div className="min-h-screen grid grid-cols-4 gap-2">
             <TotalBalance />
+            <DateNavigation />
             <div className="text-center">
 
                 <h1 className="text-3xl font-bold mb-2">

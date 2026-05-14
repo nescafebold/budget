@@ -1,8 +1,7 @@
 // "use client" means this component runs in the browser, not on the server.
 // We need this because we're using form state, onClick handlers, etc.
 "use client";
-import BudgetSvg from "@/components/icons/budgetsvg";
-import Image from "next/image";
+
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -13,21 +12,10 @@ import { loginSchema, type LoginInput } from "@/lib/validations";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+
 import GithubIcon from "@/components/icons/githubicon";
 import GoogleIcon from "@/components/icons/googleicon";
-import DashboardSvg from "@/components/icons/dashboardsvg";
-import TransactionsSvg from "@/components/icons/transactionssvg";
-import ReportsSvg from "@/components/icons/reportssvg";
-import DebtTrackerSvg from "@/components/icons/debt-trackersvg";
-import SettingsSvg from "@/components/icons/settingssvg";
+
 
 export default function LoginPage() {
   // useRouter lets us navigate programmatically (e.g., after login, go to /dashboard)

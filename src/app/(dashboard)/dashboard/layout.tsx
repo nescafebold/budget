@@ -8,11 +8,11 @@ export default function RootLayout({
 }>) {
 
     return (
-        <div className="flex flex-col-reverse max-h-screen md:grid md:grid-cols-12 md:gap-2 md:flex-col">
-            <div className="w-full md:col-span-2">
+        <div className="flex flex-col-reverse h-screen overflow-hidden md:grid md:grid-cols-8 md:gap-1 md:flex-col lg:grid lg:grid-cols-12 lg:gap-2 lg:flex-col">
+            <div className="w-full md:col-span-1 lg:col-span-2">
                 <SideNav></SideNav>
             </div>
-            <div className="w-full h-full md:col-span-10">
+            <div className="w-full h-full md:col-span-7 lg:col-span-10 overflow-y-auto">
                 {children}
             </div>
         </div>
